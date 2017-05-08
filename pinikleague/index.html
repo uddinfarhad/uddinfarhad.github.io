@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<link href="css/galleria.css" rel="stylesheet" type="text/css" media="screen"> 
+
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script> 
+<script type="text/javascript" src="jquery.galleria.js"></script> 
+<script type="text/javascript"> 
+jQuery(function($) { 
+
+$('ul.gallery').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(600);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1000);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+
+
+
+
+
+
+}); 
+</script>
+
+<style media="screen,projection" type="text/css">
+	
+	/* BEGIN DEMO STYLE */
+
+	.gallery li{width:80px;height:60px;border:3px double #111;margin: 0 2px;background:#000; float:left;}
+	.gallery {width:300px;}
+
+    </style>
+
+
+
+
+<title>Pinik</title>
+</head>
+
+<body>
+
+
+<div class="container_12" id="topContent">
+    <div class="grid_4">
+            <h1>Pinik League</h1>
+            <h2>কাল বলে কিছু নেই</h2>
+    </div>
+    <div class="grid_8" id="rightTopContent">
+            <a href="index.html">home</a> |
+            <a href="https://www.facebook.com/groups/658604937518691/">group</a> |
+            <a href="#">contact</a>
+    </div>
+</div>
+
+
+    <div class="clear">&nbsp;</div>
+
+<div class="container_12">
+<div class="grid_4">    
+        <ul class="gallery"> 
+			<li class="active"><img src="./images/1.jpg" title="" alt="1"></li> 
+            <li><img src="./images/2.jpg" title="" alt="2"></li> 
+            <li><img src="./images/3.jpg" title="" alt="3"></li> 
+            <li><img src="./images/4.jpg" title="" alt="4"></li> 
+            <li><img src="./images/5.jpg" title="" alt="5"></li> 
+            <li><img src="./images/6.jpg" title="" alt="6"></li> 
+            <li><img src="./images/7.jpg" title="" alt="7"></li> 
+            <li><img src="./images/8.jpg" title="" alt="8"></li> 
+            <li><img src="./images/9.jpg" title="" alt="9"></li> 
+            <li><img src="./images/10.jpg" title="" alt="10"></li> 
+            <li><img src="./images/11.jpg" title="" alt="11"></li> 
+            <li><img src="./images/12.jpg" title="" alt="12"></li> 
+		</ul>
+        
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_8">
+
+			<div id="main_image"></div>
+	</div>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <div class="container_16">
+    <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    
+      <div class="grid_12" id="galleryInformation">
+		<h2>বাংলাদেশ আওয়ামী পিনিক লীগ</h2>
+        <p>
+			সবাই বলে গাঁজাতে নাকি আগের মতো স্বাদ নাই, আমি বলি জিহ্বাটও তো আর আগের মতো নাই। দোষ যারই হোক, সময় থেমে থাকেনি, থেমে থাকেনি ইনাদের বেচেঁ থাকার তাগিদ। ১৭ বছর আগে যখন ইনাদের সাথে পরিচয় তখন তাদের যুবক বলেই মনে হয়েছিল আজ তাহারা নাম লিখিয়েছেন বয়্ষ্কের তালিকায়। আমি বালক থেকে হয়েছি সাবালক, সাবালক থেকে যুবক। ১৭ বছরে অনেক কিছুই পাল্টেছে, যদি কিছু না পাল্টে থাকে তা ইনাদের নির্র্লিপ্ত দুটি চোখ। 
+			পুনশ্চ-- আমার জীবনের ৯০ শতাং গাঁজা ইনাদের কাছে খাওয়া এক জীবনে আর এতো গাঁজা খাওয়া সম্ভব না। 
+		</p>
+        
+      <h2>নেশা দ্রব্য</h2>
+       <p>মদ, গাজা, ভাং, আফিম, হেরোইন, প্যাথেডিন, কোকেন, ফেনসিডিল, ইয়াবা, আঠা, টিকটিকির লেজসহ বিভিন্ন ধরণের নেশা</p> 
+       
+       
+       
+       
+       <h2>স্পট</h2> 
+       <p>উদ্যান , চাঙ্কারপুল, গুলিস্তান, কাওরানবাজার ইত্যাদি </p>
+       
+       <h2>পার্শ্বপ্রতিক্রিয়া</h2>
+       <p> অসামাজিক কার্যকলাপ, রিএড সর্বোপরি জীবন ধ্বংস </p>
+       
+       
+       
+       
+       <div id="footer"><a href="#">All right reserve by Pinik League Inc.</a></div>
+	</div>
+    
+        <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    </div>
+    
+</div>
+
+</body>
+</html>
