@@ -20,6 +20,7 @@ body{
 	color:white;
 	width:960px;
 	height:40px;
+	overflow:hidden;
 	
 }
 .logo{
@@ -60,6 +61,8 @@ body{
 	background:url(image/tower.jpg) no-repeat;
 	background-size:960px 300px;
 	font-family: 'Roboto', sans-serif;
+	overflow:hidden;
+	
 }
 .menu2{
 	min-height:40px;
@@ -123,12 +126,14 @@ margin-left:15px;
 	width:960px;
 	height:829px;
 	border-bottom:1px solid #8e051d;
+	overflow:hidden;
 }
 .leftcontent{
 	width:230px;
 	float:left;
 	height:829px;
 	background:rgb(189, 177, 177);
+	overflow:hidden;
 }
 .leftcontent h3{
 	background:#8e051d;
@@ -149,7 +154,8 @@ margin-left:15px;
 	height:829px;
 	float:left;
 	background:rgba(128, 128, 128, 0.25);
-	padding:5px 5px 3px 5px
+	padding:5px 5px 3px 5px;
+	overflow:hidden;
 }
 .middlecontent h2{
 	padding:0px 0px 3px 35px;
@@ -171,6 +177,7 @@ blockquote{
 	float:left;
 	height:829px;
 	background:rgb(189, 177, 177);
+	overflow:hidden;
 }
 .rightcontent h3{
 	background:#8e051d;
@@ -205,6 +212,7 @@ p{
 	width:960px;
 	height:170px;
 	background:gray;
+	overflow:hidden;
 }
 .footerleft{
 	width:280px;
@@ -257,6 +265,7 @@ p{
 	height:40px;
 	background:black;
 	color:white;
+	overflow:hidden;
 }
 .footerdown p{
 	text-align:center;
