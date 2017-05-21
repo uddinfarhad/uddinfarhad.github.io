@@ -3,6 +3,9 @@
 	padding:0;
 }
 @import url('https://fonts.googleapis.com/css?family=Lato');
+body{
+	transition:all 0.5s ease;
+}
 a{
 	text-decoration:none;
 }
