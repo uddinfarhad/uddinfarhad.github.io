@@ -1,0 +1,59 @@
+.navbar-toggle {
+    margin-top: 35px;
+}
+.about-item{
+	margin-bottom:30px;
+}
+.service-item{
+	margin-bottom:30px;
+}
+.pricing-item{
+	margin-bottom:30px;
+}
+.count{
+	margin-bottom:30px;
+}
+.button-group .button {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+	.item h3 {
+    font-size: 16px;
+	}
+	.item h2 {
+    font-size: 35px;
+	}
+	.item h4 {
+    font-size: 20px;
+	}
+	.about-item{
+	max-width:292px;
+	margin:30px auto;
+	}
+	.service-item{
+	max-width:292px;
+	margin:30px auto;
+	}
+	.pricing-item{
+	max-width:292px;
+	margin:30px auto;
+	}
+	.count{
+	max-width:292px;
+	margin:30px auto;
+	}
+	.element-item{
+		width:50%;
+	}
+
+}
+@media only screen and (max-width: 480px) {
+	.element-item{
+		width:100%;
+	}
+	#slider{
+		display:none;
+	}
+
+}
